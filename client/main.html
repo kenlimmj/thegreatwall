@@ -1,0 +1,92 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+    <meta name="apple-mobile-web-app-title" content="@kenlimmj">
+    <meta name="description" content="Page Description">
+
+    <!-- Facebook OpenGraph Info -->
+    <!-- TODO -->
+
+    <!-- Twitter OpenGraph Info -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@kenlimmj">
+    <meta name="twitter:domain" content="kenlimmj.com">
+    <meta name="twitter:creator" content="@kenlimmj">
+    <meta name="twitter:image:src" content="Logo">
+
+    <!-- Prefetch CDNs and External Dependencies -->
+    <link rel="dns-prefetch" href="//brick.a.ssl.fastly.net">
+    <link rel="dns-prefetch" href="//google-analytics.com">
+    <link rel="dns-prefetch" href="//github.com">
+    <link rel="dns-prefetch" href="//mathjax.org">
+
+    <!-- FIXME: Temporary mojo while we're test deploying on Meteor -->
+    <link rel="dns-prefetch" href="//meteor.com">
+
+    <!-- Preload important pages (pretty much everything!) -->
+    <link rel="prerender" href="/posts">
+    <link rel="prerender" href="/about">
+    <link rel="prerender" href="/resume">
+    <link rel="prerender" href="/projects">
+    <link rel="prerender" href="https://github.com/kenlimmj/feedback/issues/new">
+
+    <!-- Load Favicons -->
+    <link rel="shortcut icon" href="/icon.png">
+    <link rel="apple-touch-icon-precomposed" href="/icon.png">
+
+    <!-- Load Fonts -->
+    <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Lato:200,200i,300,300i,400,400i:f/Inconsolata:500:f">
+
+    <!-- Load and Config Mathjax -->
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [
+                ['$', '$'],
+                ['\\(', '\\)']
+            ]
+        }
+    });
+    </script>
+    <script src="//beta.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+
+<template name="mainLayout">
+    <main>
+        {{>connectionBanner}}
+        <!-- {{>grid}} -->
+        {{>yield}}
+    </main>
+    <footer>
+        <script>
+            window.addEventListener('load', function() {
+                FastClick.attach(document.body);
+            }, false);
+
+            Meteor.loginWithPassword("kenlimmj@gmail.com", "apple1");
+        </script>
+    </footer>
+</template>
+
+<template name="logoPlate">
+    <nav>
+        <div class="name">
+            <a href="{{pathFor 'listPosts'}}">@kenlimmj</a>
+            <span class="subtitle">
+                Lim Mingjie, Kenneth
+            </span>
+        </div>
+        <menu class="unstyled">
+            <li><a href="{{pathFor 'about'}}">About</a>
+            </li>
+            <li><a href="{{pathFor 'resume'}}">Resume</a>
+            </li>
+            <li><a href="{{pathFor 'projects'}}">Projects</a>
+            </li>
+            <li><a href="{{pathFor 'talks'}}">Talks</a>
+            </li>
+            <li><a href="https://github.com/kenlimmj/feedback/issues/new">Questions</a>
+            </li>
+        </menu>
+    </nav>
+</template>

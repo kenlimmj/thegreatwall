@@ -1,0 +1,224 @@
+// UNIVERSAL //
+html {
+  @extend %color--text__body;
+  @extend %font--lato;
+
+  // Force this down to 10px so all our rem declarations below are straightforward multiples of 10
+  @include media($computer)  { font-size: 10px;  }
+  @include media($tablet)    { font-size: 9px;   }
+  @include media($mobile)    { font-size: 8px;   }
+}
+
+::-moz-selection {
+    background: $base2;
+    text-shadow: none;
+}
+
+::selection {
+    background: $base2;
+    text-shadow: none;
+}
+
+// HEADINGS //
+h1,h2,h3,h4,h5,h6 {
+  @extend %color--text__header;
+
+  // Standardize font-sizes for all heading elements so we can assign semantic meaning
+  // without worrying about font-size changes. Font-size should be assigned separately.
+  @include font-size(1);
+
+  // Flatten the line-height for header elements
+  line-height: 1;
+}
+
+.post--title {
+  @extend %font--size__09;
+  @extend %font--light;
+}
+
+.post--title__preview {
+  @extend .post--title;
+
+  font-size: calc(#{$scale53}rem/1.4) !important;
+}
+
+.post--date {
+  @extend %font--size__04;
+  @extend %font--light;
+}
+
+.post--date__preview {
+  @extend .post--date;
+
+  font-size: calc(#{$scale16}/1.4) !important;
+}
+
+.name {
+  @extend %font--size__07;
+  @extend %font--light;
+  @extend %margin--0;
+
+  & > a {
+    @extend %color--text__header;
+  }
+}
+
+.subtitle {
+  @extend %font--size__05;
+  @extend %font--light;
+  @extend %color--text__accent;
+}
+
+// PARAGRAPH //
+p {
+  @extend %font--size__05;
+  @extend %font--regular;
+
+  -webkit-hyphens: auto;
+     -moz-hyphens: auto;
+          hyphens: auto;
+
+  line-height: $scale16;
+}
+
+.post--body__preview {
+  font-size: calc(#{$scale20}rem/1.3) !important;
+  line-height: 1.3;
+
+  & > p, ol, ul {
+    font-size: calc(#{$scale20}rem/1.4) !important;
+  }
+
+  & > pre > code {
+    font-size: calc(#{$scale16}rem/1.4) !important;
+  }
+
+  & > blockquote > p {
+    font-size: calc(#{$scale25}rem/1.4) !important;
+  }
+}
+
+// LISTS //
+ul, ol {
+  @extend %font--size__05;
+  @extend %font--regular;
+  @extend %margin--0;
+
+  padding: 0;
+
+  line-height: $scale16;
+
+  -webkit-hyphens: auto;
+     -moz-hyphens: auto;
+          hyphens: auto;
+}
+
+.unstyled {
+  list-style: none;
+}
+
+.list--posts {
+  & a {
+    @extend %font--size__06;
+    @extend %font--regular;
+  }
+
+  & p {
+    @extend %font--size__04;
+    @extend %font--regular;
+  }
+
+  & time {
+    @extend %font--size__04;
+    @extend %font--regular;
+    @extend %text--right;
+
+    line-height: 1
+  }
+}
+
+menu {
+  @extend %text--right;
+
+  & li {
+    @extend %font--regular;
+    @extend %font--size__04;
+  }
+
+  & a {
+    @extend %color--text__header;
+  }
+}
+
+// CODE AND PREFORMATTED TEXT //
+pre, code {
+  @extend %font--inconsolata;
+  @extend %font--size__05;
+
+  line-height: 1;
+
+  overflow-x: scroll;
+}
+
+code {
+  border: #{$scale01}rem solid $color--text__accent;
+  border-radius: #{$scale07}rem;
+
+  padding: #{$scale04}rem #{$scale06}rem;
+
+  white-space: pre;
+}
+
+pre {
+  display: block;
+
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+pre > code {
+  @extend %font--size__04;
+
+  padding: 0;
+
+  border: 0 none transparent;
+}
+
+// BLOCKQUOTE //
+
+blockquote > p {
+  @extend %color--text__header;
+  @extend %margin--0;
+  @extend %font--size__06;
+
+  font-style: italic;
+
+  &:before {
+    content: open-quote;
+  }
+
+  &:after {
+    content: close-quote;
+  }
+}
+
+// RULERS //
+hr {
+  border: 0;
+  height: 0;
+  border-top: #{$scale01}rem solid rgba(0, 0, 0, 0.1);
+  border-bottom: #{$scale01}rem solid rgba(255, 255, 255, 0.3);
+}
+
+// FIGURE CAPTIONS //
+figcaption {
+  @extend %font--size__04;
+
+  font-style: italic;
+}
+
+////
+
+#loginForm {
+    @extend %font--size__09;
+}

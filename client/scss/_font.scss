@@ -1,0 +1,45 @@
+%font-smoothing-settings
+{
+    @include prefixer(font-smoothing, antialiased, (webkit,ms,o,spec));
+}
+
+%font-feature-settings
+{
+    @include prefixer(font-feature-settings, ('onum' 1, 'pnum' 1, 'afrc' 1, 'zero' 1, 'nalt' 1, 'kern' 1, 'liga' 1, 'dlig' 1, 'hlig' 1, 'clig' 1, 'swsh' 1, 'calt' 1, 'hist' 1), (webkit,ms,o,moz,spec));
+   -moz-font-feature-settings: 'onum=1, pnum=1, afrc=1, zero=1, nalt=1, kern=1, liga=1, dlig=1, hlig=1, clig=1, swsh=1, calt=1, hist=1';
+}
+
+%font-misc-settings
+{
+    font-size-adjust: auto;
+
+    font-kerning: normal;
+    text-rendering: optimizeLegibility;
+}
+
+//// LATO FONT-FACE ////
+// Config for the Lato font-face loaded via a stylesheet called
+// from the brick.im CDN (in main.html)
+
+%font--lato
+{
+    font-family: 'Lato', 'HelveticaNeue LT 35 Thin', 'Helvetica Neue', 'Arial', 'sans-serif';
+
+    @extend %font-feature-settings;
+    @extend %font-smoothing-settings;
+    @extend %font-misc-settings;
+}
+
+//// INCONSOLATA FONT-FACE ////
+// Config for the Inconsolata font-face loaded via a stylesheet called
+// from the brick.im CDN (in main.html)
+// Usage: Code and Preformatted Text
+
+%font--inconsolata
+{
+    font-family: 'Inconsolata', 'monospace';
+
+    @extend %font-feature-settings;
+    @extend %font-smoothing-settings;
+    @extend %font-misc-settings;
+}

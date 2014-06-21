@@ -1,0 +1,87 @@
+// Villard de Honnecourt's Diagram (Villard's Figure)
+
+$num-col: 18;
+$num-row: 9;
+
+$height: 100;
+
+$col-width: 100/$num-col;
+$row-width: $height/$num-row;
+
+$opacity: 10%;
+
+$line-width: 0.15;
+
+.villard-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: #{$height}vh;
+
+  pointer-events: none;
+}
+
+.villard-col {
+  float: left;
+
+  width: #{9*$col-width}vw;
+  height: inherit;
+
+  line-height: #{$row-width}vh;
+  text-align: center;
+
+  border-right: #{$line-width}rem solid #FE48FF;
+
+  opacity: $opacity;
+}
+
+.villard-box {
+  float:left;
+
+  width: #{(6*$col-width)+($line-width/2)}vw;
+  height: #{(6*$row-width)+($line-width/2)}vh;
+
+  margin-top: #{($row-width)-($line-width)}vh;
+  margin-left: #{(2*$col-width)-($line-width/2)}vw;
+
+  border: #{$line-width}rem solid #FE48FF;
+
+  overflow: hidden;
+}
+
+.villard-box-big {
+  float:left;
+
+  width: #{(7*$col-width)+($line-width)}vw;
+  height: #{(7*$row-width)-($line-width)}vh;
+
+  margin-top: #{(3*$row-width/4)-(15*$line-width)}vh;
+  margin-left: #{(39*$col-width/4)-($line-width)}vw;
+
+  border: #{$line-width}rem solid darken(#FE48FF,20%);
+}
+
+.villard-box-small {
+  float:left;
+
+  width: #{(5*$col-width)+($line-width)}vw;
+  height: #{(5*$row-width)-($line-width)}vh;
+
+  margin-top: #{(3*$row-width/2)-(15*$line-width)}vh;
+  margin-left: #{(21*$col-width/2)-($line-width)}vw;
+
+  border: #{$line-width}rem solid lighten(#FE48FF,20%);
+}
+
+.villard-circle {
+  float: left;
+  margin-top: #{($row-width)-($line-width)}vh;
+
+  width: #{(9*$col-width)}vw;
+  height: #{(9*$col-width)}vw;
+
+  border-radius: 50%;
+  border: #{$line-width}rem solid #4CFFFF;
+}

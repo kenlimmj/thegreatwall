@@ -1,0 +1,24 @@
+// FANCY TYPE //
+%font--light    { font-weight: 200; }
+%font--regular  { font-weight: 300; }
+%font--heavy    { font-weight: 400; }
+
+// ALIGNMENT //
+%text--left   { text-align: left; }
+%text--center { text-align: center; }
+%text--right  { text-align: right; }
+
+// FONT SIZES //
+%font--size__01  { @include font-size($scale07); }
+%font--size__02  { @include font-size($scale09); }
+%font--size__03  { @include font-size($scale12); }
+%font--size__04  { @include font-size($scale16); }
+%font--size__05  { @include font-size($scale20); }
+%font--size__06  { @include font-size($scale25); }
+%font--size__07  { @include font-size($scale33); }
+%font--size__08  { @include font-size($scale41); }
+%font--size__09  { @include font-size($scale53); }
+%font--size__10  { @include font-size($scale67); }
+%font--size__11  { @include font-size($scale86); }
+%font--size__12 { @include font-size($scale109); }
+%font--size__13 { @include font-size($scale139); }

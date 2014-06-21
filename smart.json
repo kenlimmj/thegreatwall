@@ -1,0 +1,23 @@
+{
+    "packages": {
+        "iron-router": {},
+        "subs-manager": {},
+        "fast-render": {},
+        "roles": {},
+        "moment": {},
+        "garlic": {},
+        "alertfy": {},
+        "accounts-emails-field": {},
+        "scss": {},
+        "connection-banner": {},
+        "npm": {},
+        "collection2": {},
+        "runtime-appcache": {},
+        "velocityjs": {},
+        "fastclick": {},
+        "find-faster": {},
+        "rssfeed": {},
+        "sitemaps": {},
+        "headly": {}
+    }
+}
