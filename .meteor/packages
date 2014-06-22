@@ -4,5 +4,23 @@
 # but you can also edit it by hand.
 
 standard-app-packages
-autopublish
-insecure
+npm
+simple-schema
+collection2
+iron-router
+subs-manager
+fast-render
+roles
+accounts-emails-field
+scss
+runtime-appcache
+find-faster
+moment
+garlic
+connection-banner
+velocityjs
+headly
+sitemaps
+rssfeed
+fastclick
+browser-policy
