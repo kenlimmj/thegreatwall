@@ -3,24 +3,24 @@
 # 'meteor add' and 'meteor remove' will edit this file for you,
 # but you can also edit it by hand.
 
-standard-app-packages
-npm
-simple-schema
-collection2
-iron-router
-subs-manager
-fast-render
-roles
+# runtime-appcache
 accounts-emails-field
-scss
-runtime-appcache
-find-faster
-moment
-garlic
-connection-banner
-velocityjs
-headly
-sitemaps
-rssfeed
-fastclick
 browser-policy
+collection2
+connection-banner
+fast-render
+fastclick
+find-faster
+garlic
+headly
+iron-router
+moment
+npm
+oauth-encryption
+roles
+rssfeed
+scss
+simple-schema
+sitemaps
+standard-app-packages
+subs-manager
