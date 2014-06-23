@@ -1,22 +1,26 @@
 {
-    "packages": {
-        "iron-router": {},
-        "subs-manager": {},
-        "fast-render": {},
-        "roles": {},
-        "moment": {},
-        "garlic": {},
-        "accounts-emails-field": {},
-        "scss": {},
-        "connection-banner": {},
-        "npm": {},
-        "collection2": {},
-        "runtime-appcache": {},
-        "velocityjs": {},
-        "fastclick": {},
-        "find-faster": {},
-        "rssfeed": {},
-        "sitemaps": {},
-        "headly": {}
-    }
+  "packages": {
+    "iron-router": {},
+    "subs-manager": {},
+    "fast-render": {},
+    "roles": {},
+    "moment": {},
+    "garlic": {},
+    "accounts-emails-field": {},
+    "scss": {},
+    "connection-banner": {},
+    "npm": {},
+    "collection2": {},
+    "runtime-appcache": {},
+    "velocityjs": {},
+    "fastclick": {},
+    "find-faster": {},
+    "rssfeed": {},
+    "sitemaps": {},
+    "headly": {},
+    "persisting-user-status": {},
+    "bootstrap-flatly": {},
+    "accounts-ui-bootstrap-3": {},
+    "auto-nprogress": {}
+  }
 }

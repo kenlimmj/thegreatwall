@@ -16,6 +16,11 @@ BrowserPolicy.content.allowConnectOrigin("wss://*.meteor.com");
 BrowserPolicy.content.allowOriginForAll('brick.a.ssl.fastly.net');
 BrowserPolicy.content.allowFontDataUrl();
 
+// Allow fonts to be loaded from the CDN, and via data URI
+BrowserPolicy.content.allowOriginForAll('fonts.googleapis.com');
+BrowserPolicy.content.allowOriginForAll('themes.googleusercontent.com');
+BrowserPolicy.content.allowFontDataUrl();
+
 // Allow GA to be loaded from the world of self-driving cars
 BrowserPolicy.content.allowOriginForAll('*.google-analytics.com');
 

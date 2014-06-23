@@ -19,7 +19,11 @@
       "find-faster": {},
       "rssfeed": {},
       "sitemaps": {},
-      "headly": {}
+      "headly": {},
+      "persisting-user-status": {},
+      "bootstrap-flatly": {},
+      "accounts-ui-bootstrap-3": {},
+      "auto-nprogress": {}
     },
     "packages": {
       "iron-router": {
@@ -112,6 +116,26 @@
         "tag": "v0.1.1",
         "commit": "f14effc81eab10efb876664bc010a5341ac95358"
       },
+      "persisting-user-status": {
+        "git": "https://github.com/yasinuslu/meteor-persisting-user-status.git",
+        "tag": "v0.4.0-2",
+        "commit": "193e239213dc85a7d4f4bf219ac970eaa25f4fa8"
+      },
+      "bootstrap-flatly": {
+        "git": "https://github.com/grokbot/meteor-bootstrap-flatly.git",
+        "tag": "v0.0.4",
+        "commit": "53dcf5c4aad152e9b88dcc0f8d1dfbb1985200d7"
+      },
+      "accounts-ui-bootstrap-3": {
+        "git": "https://github.com/mangasocial/meteor-accounts-ui-bootstrap-3.git",
+        "tag": "v0.3.0-1",
+        "commit": "93ffa5d0e325dc7026de89f6d90c178fa04bdd3a"
+      },
+      "auto-nprogress": {
+        "git": "https://github.com/settinghead/meteor-auto-nprogress.git",
+        "tag": "v0.2.7",
+        "commit": "3fa87d5244e140cc5b49696585cd23b110c36467"
+      },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",
         "tag": "v0.2.4",
@@ -131,6 +155,16 @@
         "git": "https://github.com/gadicohen/meteor-robots.txt.git",
         "tag": "v0.0.8",
         "commit": "dc1be195b8c0cf7d6263235484218911e1bf27d9"
+      },
+      "timesync": {
+        "git": "https://github.com/mizzao/meteor-timesync.git",
+        "tag": "v0.1.6",
+        "commit": "83067433f511bc13a11ae8c87e9a4d331256915e"
+      },
+      "nprogress": {
+        "git": "https://github.com/zhouzhuojie/meteor-nprogress.git",
+        "tag": "v0.0.4",
+        "commit": "8333206b751a24fac1fbd1b03fa37621bcefe50c"
       }
     }
   }
