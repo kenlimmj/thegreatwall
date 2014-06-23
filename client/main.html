@@ -5,9 +5,7 @@
     <meta name="description" content="Page Description">
 
     <!-- Prefetch CDNs and External Dependencies -->
-    <link rel="dns-prefetch" href="//brick.a.ssl.fastly.net">
     <link rel="dns-prefetch" href="//google-analytics.com">
-    <link rel="dns-prefetch" href="//github.com">
     <link rel="dns-prefetch" href="//mathjax.org">
 
     <!-- FIXME: Temporary mojo while we're test deploying on Meteor -->
@@ -17,8 +15,11 @@
     <link rel="shortcut icon" href="/icon.png">
     <link rel="apple-touch-icon-precomposed" href="/icon.png">
 
-    <!-- Load Fonts -->
-    <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Lato:200,200i,300,300i,400,400i:f/Inconsolata:500:f">
+    <style>
+    textarea {
+        resize: vertical;
+    }
+    </style>
 
     <!-- Load and Config Mathjax -->
     <script type="text/x-mathjax-config">
@@ -35,16 +36,51 @@
 </head>
 
 <template name="mainLayout">
-    <main>
-        {{>connectionBanner}}
+    {{>connectionBanner}}
+    <nav class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#header--nav">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">TGW</a>
+            </div>
+            <div class="collapse navbar-collapse" id="header--nav">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Questions</a></li>
+                    <li><a href="#">Notes</a></li>
+                    <li><a href="#">Lectures</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Opportunities</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    {{>loginButtons}}
+                    <!-- <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Kenneth Lim <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        <li><a href="#">Profile</a></li>
+                        <li><a href="#">Admin <span class="badge pull-right">42</span></a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Logout</a></li>
+                        </ul>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="container">
         <!-- {{>grid}} -->
         {{>yield}}
     </main>
     <footer>
         <script>
-            window.addEventListener('load', function() {
-                FastClick.attach(document.body);
-            }, false);
+        window.addEventListener('load', function() {
+            FastClick.attach(document.body);
+        }, false);
         </script>
     </footer>
 </template>

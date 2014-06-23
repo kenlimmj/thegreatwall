@@ -30,3 +30,9 @@ velocityjs
 accounts-password
 accounts-ui-bootstrap-3
 auto-nprogress
+bootstrap-alerts
+accounts-facebook
+accounts-google
+accounts-github
+accounts-twitter
+accounts-weibo

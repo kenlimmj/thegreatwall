@@ -21,6 +21,7 @@
     "persisting-user-status": {},
     "bootstrap-flatly": {},
     "accounts-ui-bootstrap-3": {},
-    "auto-nprogress": {}
+    "auto-nprogress": {},
+    "bootstrap-alerts": {}
   }
 }
