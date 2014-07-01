@@ -1,0 +1,18 @@
+<template name="breadcrumb">
+    <style>
+    .breadcrumb {
+        border-radius: 0 !important;
+    }
+    .navbar {
+        margin-bottom: 0 !important;
+    }
+    </style>
+
+    <ol class="breadcrumb">
+        <li><a href="#">Home</a>
+        </li>
+        <li><a href="#">{{currentCategory}}</a>
+        </li>
+        <li class="active">{{currentPath}}</li>
+    </ol>
+</template>
