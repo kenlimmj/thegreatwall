@@ -1,0 +1,27 @@
+<template name="adminLayout">
+    <style>
+    .breadcrumb {
+        border-radius: 0 !important;
+    }
+    .navbar {
+        margin-bottom: 0 !important;
+    }
+    </style>
+
+    {{> headNav}}
+
+    <main class="container-fluid">
+        <div class="row">
+            {{> breadcrumb }}
+            <aside class="col-md-3">
+                {{> yield region="aside"}}
+            </aside>
+            <section class="col-md-9">
+                {{> yield}}
+            </section>
+            <footer class="col-md-12">
+                {{> yield region="footer"}}
+            </footer>
+        </div>
+    </main>
+</template>

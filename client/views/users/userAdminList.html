@@ -1,0 +1,26 @@
+<template name="userAdminList">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <form role="form" class="form-horizontal">
+                <input type="search" class="form-control" placeholder="Filter by username&hellip;" disabled>
+            </form>
+        </div>
+        <ul class="list-group">
+            {{#each users}}
+            <li class="list-group-item">
+                <div class="media">
+                    <a class="pull-left" href="#">
+                        <img class="media-object" src="{{profile.avatar}}" alt="Avatar">
+                    </a>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading">
+                        {{profile.name}}
+                        <small>{{username}}</small>
+                    </h4>
+                </div>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+</template>

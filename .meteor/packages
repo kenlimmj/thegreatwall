@@ -5,6 +5,16 @@
 
 # runtime-appcache
 accounts-emails-field
+accounts-facebook
+accounts-github
+accounts-google
+accounts-password
+accounts-twitter
+accounts-ui-bootstrap-3
+accounts-weibo
+auto-nprogress
+bootstrap-alerts
+bootstrap-flatly
 browser-policy
 collection2
 connection-banner
@@ -14,9 +24,12 @@ find-faster
 garlic
 headly
 iron-router
+iron-router-active
 moment
 npm
 oauth-encryption
+persisting-user-status
+publish-counts
 roles
 rssfeed
 scss
@@ -24,15 +37,5 @@ simple-schema
 sitemaps
 standard-app-packages
 subs-manager
-persisting-user-status
-bootstrap-flatly
 velocityjs
-accounts-password
-accounts-ui-bootstrap-3
-auto-nprogress
-bootstrap-alerts
-accounts-facebook
-accounts-google
-accounts-github
-accounts-twitter
-accounts-weibo
+accounts-linkedin

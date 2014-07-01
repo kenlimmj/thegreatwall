@@ -15,14 +15,8 @@
     <link rel="shortcut icon" href="/icon.png">
     <link rel="apple-touch-icon-precomposed" href="/icon.png">
 
-    <style>
-    textarea {
-        resize: vertical;
-    }
-    </style>
-
     <!-- Load and Config Mathjax -->
-    <script type="text/x-mathjax-config">
+    <!-- <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
         tex2jax: {
             inlineMath: [
@@ -31,48 +25,13 @@
             ]
         }
     });
-    </script>
-    <script src="//beta.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </script> -->
+    <!-- <script src="//beta.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
 </head>
 
 <template name="mainLayout">
-    {{>connectionBanner}}
-    <nav class="navbar navbar-default navbar-static-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#header--nav">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">TGW</a>
-            </div>
-            <div class="collapse navbar-collapse" id="header--nav">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Questions</a></li>
-                    <li><a href="#">Notes</a></li>
-                    <li><a href="#">Lectures</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Opportunities</a></li>
-                    <li><a href="#">FAQ</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    {{>loginButtons}}
-                    <!-- <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Kenneth Lim <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                        <li><a href="#">Profile</a></li>
-                        <li><a href="#">Admin <span class="badge pull-right">42</span></a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">Logout</a></li>
-                        </ul>
-                    </li> -->
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <main class="container">
+    {{> headNav}}
+    <main class="container-fluid">
         <!-- {{>grid}} -->
         {{>yield}}
     </main>
