@@ -1,0 +1,47 @@
+<template name="adminNav">
+    <nav id="adminNavAccordion">
+        <div class="page-header" data-toggle="collapse" href="#collectionList" data-parent="#adminNavAccordion" style="margin-top: 0">
+            <h4>
+                Collections <b class="caret"></b>
+            </h4>
+        </div>
+
+        <ul class="nav nav-pills nav-stacked collapse in" role="navigation" id="collectionList">
+            <li class="{{isActiveRoute 'disciplineAdminList'}}"><a href="{{pathFor 'disciplineAdminList'}}">Disciplines <span class="badge pull-right">{{disciplineCount}}</span></a>
+            </li>
+            <li class="{{isActiveRoute 'questionAdminList'}}"><a href="{{pathFor 'questionAdminList'}}">Questions <span class="badge pull-right">{{questionCount}}</span></a>
+            </li>
+            <!-- <li class="{{isActiveRoute 'cookbookAdminList'}}"><a href="{{pathFor 'cookbookAdminList'}}">Cookbook <span class="badge pull-right">{{cookbookCount}}</span></a>
+            </li>
+            <li class="{{isActiveRoute 'lectureAdminList'}}"><a href="{{pathFor 'lectureAdminList'}}">Lectures <span class="badge pull-right">{{lectureCount}}</span></a>
+            </li>
+            <li class="{{isActiveRoute 'jobAdminList'}}"><a href="{{pathFor 'jobAdminList'}}">Jobs <span class="badge pull-right">{{jobCount}}</span></a>
+            </li> -->
+            <li class="{{isActiveRoute 'userAdminList'}}"><a href="{{pathFor 'userAdminList'}}">Users <span class="badge pull-right">{{userCount}}</span></a>
+            </li>
+        </ul>
+
+        <div class="page-header" data-toggle="collapse" href="#creationList" data-parent="#adminNavAccordion">
+            <h4>
+                Content Creation <b class="caret"></b>
+            </h4>
+        </div>
+
+        <ul class="nav nav-pills nav-stacked collapse" role="navigation" id="creationList">
+            <li><a href="{{pathFor 'disciplineCreate'}}">New Discipline</a>
+            </li>
+            <li><a href="{{pathFor 'subjectCreate'}}">New Subject</a>
+            </li>
+            <li><a href="{{pathFor 'questionCreate'}}">New Question</a>
+            </li>
+            <li><a href="{{pathFor 'answerCreate'}}">New Answer</a>
+            </li>
+            <li><a href="{{pathFor 'lectureCreate'}}">New Lecture</a>
+            </li>
+            <li><a href="{{pathFor 'jobCreate'}}">New Job Listing</a>
+            </li>
+            <li><a href="{{pathFor 'userCreate'}}">New User</a>
+            </li>
+        </ul>
+    </nav>
+</template>
