@@ -17,12 +17,12 @@
     "npm": {},
     "persisting-user-status": {},
     "publish-counts": {},
-    "roles": {},
     "rssfeed": {},
     "runtime-appcache": {},
     "scss": {},
     "sitemaps": {},
     "subs-manager": {},
-    "accounts-linkedin": {}
+    "accounts-linkedin": {},
+    "authorization": {}
   }
 }

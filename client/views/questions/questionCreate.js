@@ -1,12 +1,12 @@
 Template.questionCreate.events({
-    'keyup #questionTitle': function(e) {
+    'keyup #questionTitle, change #questionTitle': function(e) {
         if (e.target.value.trim() === "") {
             $('#title-preview').html("Question Title Preview");
         } else {
             $('#title-preview').html(e.target.value.trim());
         }
     },
-    'keyup #questionBody': function(e) {
+    'keyup #questionBody, change #questionBody': function(e) {
         if (e.target.value.trim() === "") {
             $('#details-preview').html("Question Details Preview");
         } else {
@@ -26,15 +26,27 @@ Template.questionCreate.events({
         var data = {
             title: $('#questionTitle').val().trim(),
             mdContent: $('#questionBody').val().trim(),
-            author: Meteor.userId()
+            author: Meteor.userId(),
+            subject: $('#questionSubject').val(),
+            openStatus: $('#questionStatus').val() === "true"
         }
 
-        Meteor.call('insertQuestionById', data, function(error, result) {
-            if (!error) {
-                Alerts.add('Question created. You rock!', 'success');
+        Questions.insert(data, function(error, result) {
+            if (error) {
+                Alerts.add(error.message, 'warning');
             } else {
-                Alerts.add('Looks like something went wrong. Do us a favor and check if you got everything right?', 'warning');
+                Alerts.add('Question created. You rock!', 'success');
             }
-        })
+        });
     }
-})
+});
+
+Template.questionCreate.helpers({
+    scopeSubjects: function() {
+        return Subjects.findFaster({
+            discipline: {
+                $in: [this._id]
+            }
+        });
+    }
+});

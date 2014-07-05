@@ -1,3 +1,80 @@
-<template name="questionList">
-<p>Question List Page</p>
+<template name="questionListDisplay">
+    {{#with activeQuestion}}
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">{{makeTitle title}}</h3>
+        </div>
+        <div class="panel-body">
+            {{{htmlContent}}}
+        </div>
+        <div class="panel-footer">
+            <button type="button" class="btn btn-block btn-sm btn-default">Quick Reply</button>
+        </div>
+    </div>
+
+    {{#with activeAnswer}}
+    <div class="page-header">
+        <h4 class="text-center">Answers</h4>
+    </div>
+    {{#each answers}}
+    <div class="panel {{answerClass}}">
+        <div class="panel-heading">
+            <h3 class="panel-title">{{getUsername author}}
+                <span class="pull-right">{{answerType}}</span>
+            </h3>
+        </div>
+        <div class="panel-body">
+            {{{htmlContent}}}
+        </div>
+        <div class="panel-footer">
+            {{votes}}
+        </div>
+    </div>
+    {{/each}} {{/with}} {{/with}}
+</template>
+
+<template name="questionListNav">
+    <style>
+    .scroll-well {
+        max-height: 70vh;
+        overflow-y: scroll;
+    }
+    </style>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle" type="button" id="question-sorter" data-toggle="dropdown">Newest First <b class="caret"></b></a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="question-sorter">
+                    <li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" href="#">Newest First</a>
+                    </li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Oldest First</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="list-group scroll-well">
+            <a id="search-questions" class="list-group-item">
+                <form role="form">
+                    <input type="text" class="form-control" placeholder="Search&hellip;">
+                </form>
+            </a>
+            {{#each questions}}
+            <a href="#" id="{{_id}}" class="list-group-item question-selector {{activeClass}}">
+                <h4 class="list-group-item-heading">{{makeTitle title}}
+                    <span class="pull-right">
+                        <small>{{displayDate createdAt ""}}</small>
+                    </span>
+                </h4>
+                <p class="list-group-item-text">{{displayExcerpt}}</p>
+            </a>
+            {{/each}}
+            <a href="#" id="view-more" class="list-group-item">
+                <p class="list-group-item-text text-center">View More</p>
+            </a>
+        </div>
+        <div class="panel-footer">
+            <a href="{{pathFor 'questionCreate'}}" id="create-question" class="btn btn-success btn-block">Ask a Question</a>
+        </div>
+    </div>
 </template>

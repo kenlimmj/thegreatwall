@@ -16,3 +16,56 @@ String.prototype.toTitleCase = function() {
         return match.charAt(0).toUpperCase() + match.substr(1);
     });
 };
+
+//// Text Modifiers ////
+
+// Converts a string to title case
+UI.registerHelper('makeTitle', function(s) {
+    return s.toTitleCase();
+});
+
+// Returns a human-readable date from an ISO date. If the date is not
+// well-formed or does not exist, returns the text specified by fillerString
+UI.registerHelper('displayDate', function(d, fillerString) {
+    if (d) {
+        if (d.length) {
+            return moment(d[0]).format("MMMM Do YYYY");
+        }
+        return moment(d).format("MMMM Do YYYY");
+    } else {
+        return fillerString;
+    }
+});
+
+UI.registerHelper('thisValue', function() {
+    return this;
+});
+
+//// Getters ////
+
+// Returns the username associated with a user ID
+UI.registerHelper('getUsername', function(userId) {
+    Meteor.subscribe('user', {
+        _id: userId
+    }, {}, {}, 1);
+
+    return Meteor.users.findOneFaster().username;
+});
+
+// Returns the subject name associated with a subject ID
+UI.registerHelper('getSubjectName', function(subjectId) {
+    Meteor.subscribe('subject', {
+        _id: subjectId
+    }, {}, {}, 1);
+
+    return Subjects.findOneFaster().name
+});
+
+//// Environment Modifiers ////
+
+// Loads MathJax on a page
+UI.registerHelper('loadMathJax', function() {
+    $('<script src="//beta.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>').appendTo(document.head);
+
+    return null;
+});

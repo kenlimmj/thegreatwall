@@ -2,34 +2,46 @@ truncate = Meteor.require('truncate');
 casual = Meteor.require('casual');
 faker = Meteor.require('faker');
 
+var generateUserData = function() {
+    return {
+        username: faker.Internet.userName(),
+        email: faker.Internet.email(),
+        password: casual.password,
+        profile: {
+            name: faker.Name.findName(),
+            ip: faker.Internet.ip,
+            location: {
+                longitude: faker.Address.longitude(),
+                latitude: faker.Address.latitude()
+            },
+            avatar: faker.Image.avatar()
+        }
+    }
+}
+
 Meteor.startup(function() {
     if (!Meteor.users.findOneFaster()) {
         // Initialize dev user
-        Accounts.createUser({
+        devId = Accounts.createUser({
             username: "kenlimmj",
             email: "kenlimmj@gmail.com",
             password: "apple1",
             profile: {
-                name: "Kenneth Lim"
+                name: "Kenneth Lim",
+                avatar: faker.Image.avatar(),
+                ip: faker.Internet.ip,
+                location: {
+                    longitude: faker.Address.longitude(),
+                    latitude: faker.Address.latitude()
+                }
             }
         });
 
+        AuthManager.addUsersToRoles(devId, ['admin']);
+
         // Initialize fake users
         for (var j = 1; j < casual.integer(10, 30); j++) {
-            Accounts.createUser({
-                username: faker.Internet.userName(),
-                email: faker.Internet.email(),
-                password: casual.password,
-                profile: {
-                    name: faker.Name.findName(),
-                    ip: faker.Internet.ip,
-                    location: {
-                        longitude: faker.Address.longitude(),
-                        latitude: faker.Address.latitude()
-                    },
-                    avatar: faker.Image.avatar
-                }
-            });
+            Accounts.createUser(generateUserData());
         }
     }
 
@@ -82,6 +94,7 @@ Meteor.startup(function() {
             var questionId = Questions.insert({
                 author: faker.random.array_element(users)._id,
                 mdContent: faker.Lorem.sentences(casual.integer(1, 20)),
+                subscribers: [faker.random.array_element(users)._id],
                 title: casual.title,
                 subject: [faker.random.array_element(subjectData).name].map(function(e) {
                     return Subjects.findOneFaster({
@@ -102,6 +115,8 @@ Meteor.startup(function() {
                     mdContent: faker.Lorem.sentences(casual.integer(1, 20)),
                     parentQuestionId: questionId,
                     votes: casual.integer(0, 500),
+                    approved: faker.random.array_element([true, false]),
+                    flagStatus: faker.random.array_element([true, false])
                 });
             }
 

@@ -49,6 +49,8 @@ collections.forEach(function(item) {
         check(sortFields, Object);
         check(returnLimit, Match.Integer);
 
+        // If the user does not specify a sort field,
+        // sort by document id to invoke the oplog observer
         if (sortFields === {}) {
             sortFields = {
                 _id: 1

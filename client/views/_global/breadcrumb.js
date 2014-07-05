@@ -2,7 +2,7 @@ Template.breadcrumb.helpers({
     currentCategory: function() {
         var currentUrl = Router.current().path.split('/');
 
-        switch (currentUrl[currentUrl.length - 2]) {
+        switch (currentUrl[1]) {
             case 'q':
                 return "Questions";
                 break;
@@ -20,7 +20,7 @@ Template.breadcrumb.helpers({
     currentPath: function() {
         var currentUrl = Router.current().path.split('/');
 
-        switch (currentUrl[currentUrl.length - 1]) {
+        switch (currentUrl[2]) {
             case 'q':
                 return "Questions";
                 break;

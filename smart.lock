@@ -19,13 +19,13 @@
       "npm": {},
       "persisting-user-status": {},
       "publish-counts": {},
-      "roles": {},
       "rssfeed": {},
       "runtime-appcache": {},
       "scss": {},
       "sitemaps": {},
       "subs-manager": {},
-      "accounts-linkedin": {}
+      "accounts-linkedin": {},
+      "authorization": {}
     },
     "packages": {
       "accounts-emails-field": {
@@ -35,8 +35,8 @@
       },
       "accounts-ui-bootstrap-3": {
         "git": "https://github.com/mangasocial/meteor-accounts-ui-bootstrap-3.git",
-        "tag": "v0.3.0-1",
-        "commit": "93ffa5d0e325dc7026de89f6d90c178fa04bdd3a"
+        "tag": "v0.3.2",
+        "commit": "8686c0d3107cf48c72a5500b027f081c7e79dbbc"
       },
       "bootstrap-alerts": {
         "git": "https://github.com/asktomsk/bootstrap-alerts.git",
@@ -113,11 +113,6 @@
         "tag": "v0.2.1",
         "commit": "46ec19e25888c806ad458c3f6ff87fa9c7b6afdc"
       },
-      "roles": {
-        "git": "https://github.com/alanning/meteor-roles.git",
-        "tag": "v1.2.10",
-        "commit": "7ccb35de0a6cb0c9a0c3666badd04757e39c09a6"
-      },
       "rssfeed": {
         "git": "https://github.com/raix/Meteor-rssfeed.git",
         "tag": "v0.0.4",
@@ -148,6 +143,11 @@
         "tag": "v0.0.6",
         "commit": "58ae8fc9da845c2eabcacc5cc6a238af6189d19d"
       },
+      "authorization": {
+        "git": "https://github.com/deepwell/meteor-authorization.git",
+        "tag": "v2.0.4",
+        "commit": "a1e222fc2f4caf81906bb1b57dd7f6efa4a0d071"
+      },
       "simple-schema": {
         "git": "https://github.com/aldeed/meteor-simple-schema.git",
         "tag": "v0.5.1",
@@ -160,8 +160,8 @@
       },
       "timesync": {
         "git": "https://github.com/mizzao/meteor-timesync.git",
-        "tag": "v0.1.6",
-        "commit": "83067433f511bc13a11ae8c87e9a4d331256915e"
+        "tag": "v0.2.0",
+        "commit": "55f1daf261996dfbd726253688cfe7a2cc169d9b"
       },
       "http-methods": {
         "git": "https://github.com/CollectionFS/Meteor-http-methods.git",

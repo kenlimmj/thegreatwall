@@ -101,22 +101,22 @@
                         </div>
                         <ul class="list-group">
                             <li class="list-group-item">
-                                <strong>Author:</strong>{{getUsername author}}
+                                <strong>Author: </strong>{{getUsername author}}
                             </li>
                             <li class="list-group-item">
-                                <strong>Subject(s):</strong>
+                                <strong>Subject(s): </strong>
                                 {{#each subject}}
                                 <span class="label label-default">{{getSubjectName thisValue}}</span>
                                 {{/each}}
                             </li>
                             <li class="list-group-item">
-                                <strong>Question Status:</strong>{{getQuestionStatus openStatus}}
+                                <strong>Question Status: </strong>{{getQuestionStatus openStatus}}
                             </li>
                             <li class="list-group-item">
-                                <strong>Answer Status:</strong>{{getAnswerStatus answerStatus}}
+                                <strong>Answer Status: </strong>{{getAnswerStatus answerStatus}}
                             </li>
                             <li class="list-group-item">
-                                <strong>Subscriber(s):</strong>{{getUsername author}}
+                                <strong>Subscriber(s): </strong>{{getUsername author}}
                             </li>
                         </ul>
                     </div>
@@ -143,13 +143,13 @@
                         </div>
                         <ul class="list-group">
                             <li class="list-group-item">
-                                <strong>Author:</strong>{{getUsername author}}
+                                <strong>Author: </strong>{{getUsername author}}
                             </li>
                             <li class="list-group-item">
-                                <strong>Votes:</strong>{{votes}}
+                                <strong>Votes: </strong>{{votes}}
                             </li>
                             <li class="list-group-item">
-                                <strong>Flagged:</strong>{{getFlagStatus flagStatus}}
+                                <strong>Flagged: </strong>{{getFlagStatus flagStatus}}
                             </li>
                         </ul>
                     </div>

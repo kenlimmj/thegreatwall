@@ -1,5 +1,4 @@
 <template name="headNav">
-        {{> connectionBanner}}
     <nav class="navbar navbar-default navbar-static-top" role="navigation">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -13,23 +12,27 @@
             </div>
             <div class="collapse navbar-collapse" id="header--nav">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Questions</a>
+                    <li class="{{isActivePath 'halp'}}"><a href="{{pathFor 'questionList'}}">Halp</a>
                     </li>
-                    <li><a href="#">Notes</a>
+                    <li class="{{isActivePath 'notes'}}"><a href="#">Hermes</a>
                     </li>
-                    <li><a href="#">Lectures</a>
+                    <li class="{{isActiveRoute 'about'}}"><a href="{{pathFor 'about'}}">About Us</a>
                     </li>
-                    <li><a href="#">About Us</a>
+                    <li class="{{isActiveRoute 'faq'}}"><a href="{{pathFor 'faq'}}">FAQ</a>
                     </li>
-                    <li><a href="#">Opportunities</a>
+                    <li class="{{isActivePath 'admin'}}"><a href="#">Admin</a>
                     </li>
-                    <li><a href="#">FAQ</a>
-                    </li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    {{>loginButtons}}
                 </ul>
             </div>
         </div>
     </nav>
+</template>
+
+<template name="footerNav">
+    <footer class="container-fluid">
+        <div class="row">
+            <nav class="col-md-12" role="navigation">
+            </nav>
+        </div>
+    </footer>
 </template>

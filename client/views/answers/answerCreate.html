@@ -6,9 +6,9 @@
                 <div class="form-group">
                     <label for="answerBody" class="col-lg-2 control-label">Answer</label>
                     <div class="col-lg-10">
-                        <textarea class="form-control" id="answer Body" rows="15" placeholder="Once upon a time, in a land, far, far away&hellip;" required></textarea>
+                        <textarea class="form-control" id="answerBody" rows="15" placeholder="Once upon a time, in a land, far, far away&hellip;" required></textarea>
                         <span class="help-block">
-                            Go ahead and let loose. Feel free to use Markdown or LaTeX &mdash; we'll take care of that. Remember to keep things simple!
+                            Go ahead and let loose. Feel free to use <a href="https://help.github.com/articles/markdown-basics" target="_blank">Markdown</a> or <a href="http://en.wikibooks.org/wiki/LaTeX" target="_blank">LaTeX</a> &mdash; we'll take care of that. Remember to keep things simple!
                         </span>
                     </div>
                 </div>
@@ -18,7 +18,7 @@
                 <div class="form-group">
                     <label for="answerUpload" class="col-lg-2 control-label">Files</label>
                     <div class="col-lg-10">
-                        <input type="file" class="form-control" id="answerUpload">
+                        <input type="file" class="form-control" id="answerUpload" disabled>
                         <span class="help-block">
                             Add a figure or diagram here, and it'll appear next to whatever you've already typed above.
                         </span>
@@ -30,26 +30,13 @@
                 <div class="form-group">
                     <label for="userIdentity" class="col-lg-2 control-label">Identity</label>
                     <div class="col-lg-10">
-                        <select class="form-control">
+                        <select class="form-control" disabled>
                             <option value="userId" selected>Normal User</option>
                             <option value="moderatorId">Community Moderator</option>
                             <option value="adminId">Staff</option>
                         </select>
                         <span class="help-block">
                             Switch the name displayed for this post.
-                        </span>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="answerStatus" class="col-lg-2 control-label">Status</label>
-                    <div class="col-lg-10">
-                        <select class="form-control" id="answerStatus">
-                            <option value="normal" selected>Normal</option>
-                            <option value="flagged">Flagged</option>
-                            <option value="banned">Banned</option>
-                        </select>
-                        <span class="help-block">
-                            Change the status of the question
                         </span>
                     </div>
                 </div>

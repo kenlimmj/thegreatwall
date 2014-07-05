@@ -1,27 +1,14 @@
 Template.questionAdminList.helpers({
-    displayDate: function(d, fillerString) {
-        if (d) {
-            if (d.length) {
-                return moment(d[0]).format("MMMM Do YYYY");
-            }
-            return moment(d).format("MMMM Do YYYY");
-        } else {
-            return fillerString;
-        }
-    },
-    getUsername: function(userId) {
-        return Meteor.users.findOneFaster(userId).username;
-    },
     getSubjectName: function(subjectId) {
-        singleSubs.subscribe('subject', {
-            _id: String(subjectId)
+        Meteor.subscribe('subject', {
+            _id: subjectId.toString()
         }, {
             name: 1
         }, {
             name: 1
         }, 0);
 
-        return Subjects.findOneFaster(String(subjectId)).name;
+        return Subjects.findOneFaster().name;
     },
     getQuestionStatus: function(openStatus) {
         return openStatus ? "Open" : "Closed"
@@ -32,14 +19,8 @@ Template.questionAdminList.helpers({
     getFlagStatus: function(flagStatus) {
         return flagStatus ? "True" : "False"
     },
-    makeTitle: function(s) {
-        return s.toTitleCase();
-    },
-    thisValue: function() {
-        return this;
-    },
     questionAnswers: function() {
-        singleSubs.subscribe('answer', {
+        Meteor.subscribe('answer', {
             parentQuestionId: this._id
         }, {
             displayExcerpt: 0,
@@ -51,9 +32,7 @@ Template.questionAdminList.helpers({
         }, 0);
 
         return {
-            answers: Answers.findFaster({
-                parentQuestionId: this._id
-            }, {
+            answers: Answers.findFaster({}, {
                 fields: {
                     displayExcerpt: 0,
                     ogExcerpt: 0
@@ -64,6 +43,22 @@ Template.questionAdminList.helpers({
                     votes: 1
                 }
             })
+        }
+    }
+});
+
+Template.questionAdminList.events({
+    'click #view-more': function(e) {
+        e.preventDefault();
+
+        if (Session.get('questionLimit') >= Counts.get('questionCount')) {
+            e.target.parentElement.remove();
+        } else {
+            Session.set('questionLimit', Session.get('questionLimit') + 20);
+
+            if (Session.get('questionLimit') >= Counts.get('questionCount')) {
+                e.target.parentElement.remove();
+            }
         }
     }
 });

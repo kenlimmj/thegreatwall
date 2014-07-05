@@ -1,0 +1,20 @@
+<template name="listLayout">
+    {{> headNav}}
+    {{> breadcrumb}}
+    {{> connectionBanner}}
+    {{> bootstrapAlerts}}
+
+    <main class="container-fluid">
+        <div class="row">
+            <nav class="col-md-3">
+                {{> yield region="nav"}}
+            </nav>
+
+            <section class="col-md-9">
+                {{> yield}}
+            </section>
+        </div>
+    </main>
+
+    {{> footerNav}}
+</template>

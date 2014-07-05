@@ -8,3 +8,5 @@ Deps.autorun(function() {
         $(window).scrollTop(0);
     });
 });
+
+Alerts.defaultOptions.autoHide = true;

@@ -7,12 +7,10 @@
         </div>
         <ul class="list-group">
             {{#each users}}
-            <li class="list-group-item">
-                <div class="media">
-                    <a class="pull-left" href="#">
-                        <img class="media-object" src="{{profile.avatar}}" alt="Avatar">
-                    </a>
-                </div>
+            <li class="list-group-item media" style="margin-top: 0">
+                <a class="pull-left" href="#">
+                    <img class="media-object" src="{{profile.avatar}}" alt="Avatar">
+                </a>
                 <div class="media-body">
                     <h4 class="media-heading">
                         {{profile.name}}

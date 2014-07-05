@@ -1,24 +1,20 @@
 <template name="creationLayout">
-    <style>
-    textarea {
-        resize: vertical;
-    }
-    </style>
-
     {{> headNav}}
+    {{> breadcrumb}}
+    {{> connectionBanner}}
+    {{> bootstrapAlerts}}
 
     <main class="container-fluid">
         <div class="row">
-            {{> breadcrumb}}
             <section class="col-md-6">
                 {{> yield }}
             </section>
+
             <aside class="col-md-6">
                 {{> yield region="preview"}}
             </aside>
-            <footer class="col-md-12">
-                {{> yield region="footer"}}
-            </footer>
         </div>
     </main>
+
+    {{> footerNav}}
 </template>

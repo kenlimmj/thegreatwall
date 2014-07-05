@@ -5,14 +5,11 @@
 
 # runtime-appcache
 accounts-emails-field
-accounts-facebook
 accounts-github
 accounts-google
 accounts-password
-accounts-twitter
 accounts-ui-bootstrap-3
 accounts-weibo
-auto-nprogress
 bootstrap-alerts
 bootstrap-flatly
 browser-policy
@@ -30,7 +27,6 @@ npm
 oauth-encryption
 persisting-user-status
 publish-counts
-roles
 rssfeed
 scss
 simple-schema
@@ -39,3 +35,4 @@ standard-app-packages
 subs-manager
 velocityjs
 accounts-linkedin
+authorization
