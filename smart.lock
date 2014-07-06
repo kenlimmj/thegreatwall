@@ -25,7 +25,8 @@
       "sitemaps": {},
       "subs-manager": {},
       "accounts-linkedin": {},
-      "authorization": {}
+      "authorization": {},
+      "typeahead": {}
     },
     "packages": {
       "accounts-emails-field": {
@@ -35,8 +36,8 @@
       },
       "accounts-ui-bootstrap-3": {
         "git": "https://github.com/mangasocial/meteor-accounts-ui-bootstrap-3.git",
-        "tag": "v0.3.2",
-        "commit": "8686c0d3107cf48c72a5500b027f081c7e79dbbc"
+        "tag": "v0.3.3",
+        "commit": "2e50b605d8d5ed68e48c4529a65f13552d8af3f9"
       },
       "bootstrap-alerts": {
         "git": "https://github.com/asktomsk/bootstrap-alerts.git",
@@ -147,6 +148,11 @@
         "git": "https://github.com/deepwell/meteor-authorization.git",
         "tag": "v2.0.4",
         "commit": "a1e222fc2f4caf81906bb1b57dd7f6efa4a0d071"
+      },
+      "typeahead": {
+        "git": "https://github.com/sergeyt/meteor-typeahead.git",
+        "tag": "v0.0.10",
+        "commit": "fe0bb03aea8493037de134d815f9663feb21a944"
       },
       "simple-schema": {
         "git": "https://github.com/aldeed/meteor-simple-schema.git",

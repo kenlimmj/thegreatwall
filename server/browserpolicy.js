@@ -29,6 +29,9 @@ BrowserPolicy.content.allowScriptOrigin('beta.mathjax.org');
 BrowserPolicy.content.allowScriptOrigin('cdn.mathjax.org');
 BrowserPolicy.content.allowEval();
 
+// Allow tagInput to be loaded from the CDN
+BrowserPolicy.content.allowOriginForAll('cdn.jsdelivr.net');
+
 // Allow images from everywhere on the web
 BrowserPolicy.content.allowImageOrigin('*');
 

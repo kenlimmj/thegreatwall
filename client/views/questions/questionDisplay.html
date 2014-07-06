@@ -1,0 +1,19 @@
+<template name="questionDisplay">
+    {{> loadMathJax}}
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title" id="questionTitleDisplay">{{makeTitle title}}</h3>
+        </div>
+
+        <div class="panel-body" id="questionBodyDisplay">
+            {{{htmlContent}}}
+        </div>
+
+        {{#if quickReply}}
+        <div class="panel-footer">
+            <button type="button" class="btn btn-block btn-sm btn-default">Quick Reply</button>
+        </div>
+        {{/if}}
+    </div>
+</template>

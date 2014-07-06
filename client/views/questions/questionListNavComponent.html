@@ -1,0 +1,10 @@
+<template name="questionListNavComponent">
+    <a href="#" id="{{_id}}" class="list-group-item question-selector {{activeClass}}">
+        <h4 class="list-group-item-heading">{{makeTitle title}}
+            <time class="pull-right" datetime="{{createdAt}}">
+                <small>{{displayDate createdAt ""}}</small>
+            </time>
+        </h4>
+        <p class="list-group-item-text">{{displayExcerpt}}</p>
+    </a>
+</template>

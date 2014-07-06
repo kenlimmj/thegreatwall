@@ -1,14 +1,7 @@
 <template name="questionCreate">
-    {{> questionForm }}
+    {{> questionForm}}
 </template>
 
-<template name="questionPreview">
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h2 class="panel-title" id="title-preview">Question Title Preview</h2>
-        </div>
-        <div class="panel-body" id="details-preview">
-            Question Details Preview
-        </div>
-    </div>
+<template name="questionCreatePreview">
+    {{> questionDisplay title="The Three Little Pigs" htmlContent="Once upon a time, in a land far, far away&hellip;"}}
 </template>

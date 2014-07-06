@@ -23,6 +23,7 @@
     "sitemaps": {},
     "subs-manager": {},
     "accounts-linkedin": {},
-    "authorization": {}
+    "authorization": {},
+    "typeahead": {}
   }
 }

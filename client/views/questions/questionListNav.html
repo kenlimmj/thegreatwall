@@ -1,0 +1,36 @@
+<template name="questionListNav">
+    <style>
+    .scroll-well {
+        max-height: 75vh;
+        overflow-y: scroll;
+    }
+    </style>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle" type="button" id="question-sorter" data-toggle="dropdown">Newest First <b class="caret"></b></a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="question-sorter">
+                    <li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" href="#">Newest First</a>
+                    </li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Oldest First</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="list-group scroll-well">
+            <a id="search-questions" class="list-group-item">
+                <form role="form">
+                    <input type="text" class="form-control" placeholder="Search&hellip;">
+                </form>
+            </a>
+            {{#each questions}} {{> questionListNavComponent}} {{/each}}
+            <a href="#" id="view-more" class="list-group-item">
+                <p class="list-group-item-text text-center">View More</p>
+            </a>
+        </div>
+        <div class="panel-footer">
+            <a href="{{pathFor 'questionCreate'}}" id="create-question" class="btn btn-success btn-block">Ask a Question</a>
+        </div>
+    </div>
+</template>

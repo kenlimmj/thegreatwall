@@ -21,7 +21,7 @@ String.prototype.toTitleCase = function() {
 
 // Converts a string to title case
 UI.registerHelper('makeTitle', function(s) {
-    return s.toTitleCase();
+    return s ? s.toTitleCase() : null;
 });
 
 // Returns a human-readable date from an ISO date. If the date is not
@@ -49,7 +49,11 @@ UI.registerHelper('getUsername', function(userId) {
         _id: userId
     }, {}, {}, 1);
 
-    return Meteor.users.findOneFaster().username;
+    if (Meteor.users.findOneFaster()) {
+        return Meteor.users.findOneFaster().username;
+    } else {
+        return null;
+    }
 });
 
 // Returns the subject name associated with a subject ID

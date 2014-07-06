@@ -33,6 +33,6 @@ simple-schema
 sitemaps
 standard-app-packages
 subs-manager
-velocityjs
 accounts-linkedin
 authorization
+typeahead

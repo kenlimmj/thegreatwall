@@ -1,0 +1,15 @@
+<template name="answerDisplay">
+    <div class="panel {{answerClass}}">
+        <div class="panel-heading">
+            <h3 class="panel-title">{{getUsername author}}
+                <span class="pull-right">{{answerType}}</span>
+            </h3>
+        </div>
+        <div class="panel-body">
+            {{{htmlContent}}}
+        </div>
+        <div class="panel-footer">
+            {{votes}}
+        </div>
+    </div>
+</template>
