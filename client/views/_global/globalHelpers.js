@@ -52,7 +52,7 @@ UI.registerHelper('getUsername', function(userId) {
     if (Meteor.users.findOneFaster()) {
         return Meteor.users.findOneFaster().username;
     } else {
-        return null;
+        return "Anonymous User";
     }
 });
 
