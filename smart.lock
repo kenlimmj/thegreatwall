@@ -26,7 +26,13 @@
       "subs-manager": {},
       "accounts-linkedin": {},
       "authorization": {},
-      "typeahead": {}
+      "typeahead": {},
+      "zones": {},
+      "velocity": {},
+      "jasmine-unit": {},
+      "velocity-html-reporter": {},
+      "underscore-string-latest": {},
+      "easy-search": {}
     },
     "packages": {
       "accounts-emails-field": {
@@ -154,6 +160,36 @@
         "tag": "v0.0.10",
         "commit": "fe0bb03aea8493037de134d815f9663feb21a944"
       },
+      "zones": {
+        "git": "https://github.com/meteorhacks/meteor-zone.git",
+        "tag": "v0.1.2",
+        "commit": "bfe9f39102729fa65c77f1b15229c15cd23a20cb"
+      },
+      "velocity": {
+        "git": "https://github.com/xolvio/velocity.git",
+        "tag": "v0.1.11",
+        "commit": "a13c44c5acc0f4e7490bc28bc323d3dee799f9a3"
+      },
+      "jasmine-unit": {
+        "git": "https://github.com/xolvio/jasmine-unit.git",
+        "tag": "v0.1.23",
+        "commit": "17aa1e14aab1ec945f9001aefa02eb0b48ccfeab"
+      },
+      "velocity-html-reporter": {
+        "git": "https://github.com/rdickert/velocity-html-reporter.git",
+        "tag": "v0.1.4",
+        "commit": "55f973519fb6db831678219057854b94a4cec846"
+      },
+      "underscore-string-latest": {
+        "git": "https://github.com/TimHeckel/meteor-underscore-string.git",
+        "tag": "v2.3.3",
+        "commit": "4a5d70eee48fbd90a6e6fc78747250d704a0b3bb"
+      },
+      "easy-search": {
+        "git": "https://github.com/matteodem/meteor-easy-search.git",
+        "tag": "v1.0.0",
+        "commit": "d32e13f396bc36560edf64b55a3c2dd17e22c9c7"
+      },
       "simple-schema": {
         "git": "https://github.com/aldeed/meteor-simple-schema.git",
         "tag": "v0.5.1",
@@ -166,8 +202,8 @@
       },
       "timesync": {
         "git": "https://github.com/mizzao/meteor-timesync.git",
-        "tag": "v0.2.0",
-        "commit": "55f1daf261996dfbd726253688cfe7a2cc169d9b"
+        "tag": "v0.2.1",
+        "commit": "fa4abd511f4e32a3c5d22795ce2c1e8369428fac"
       },
       "http-methods": {
         "git": "https://github.com/CollectionFS/Meteor-http-methods.git",
@@ -183,6 +219,16 @@
         "git": "https://github.com/yefim/meteor-linkedin.git",
         "tag": "v0.0.2",
         "commit": "c3bac682ea0edd19e58b9172e708f91616888ba0"
+      },
+      "inject-initial": {
+        "git": "https://github.com/gadicc/meteor-inject-initial.git",
+        "tag": "v0.0.8",
+        "commit": "90f2fbcc5b4bc17fa4d4535f47813e31d86033b4"
+      },
+      "package-stubber": {
+        "git": "https://github.com/alanning/meteor-package-stubber.git",
+        "tag": "v0.0.9",
+        "commit": "30ad312bae0f7acdfe12c85e3a65479119b4e8c7"
       }
     }
   }

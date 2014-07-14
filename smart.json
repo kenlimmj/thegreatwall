@@ -24,6 +24,12 @@
     "subs-manager": {},
     "accounts-linkedin": {},
     "authorization": {},
-    "typeahead": {}
+    "typeahead": {},
+    "zones": {},
+    "velocity": {},
+    "jasmine-unit": {},
+    "velocity-html-reporter": {},
+    "underscore-string-latest": {},
+    "easy-search": {}
   }
 }
