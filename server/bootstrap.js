@@ -96,15 +96,13 @@ Meteor.startup(function() {
                 mdContent: faker.Lorem.sentences(casual.integer(1, 20)),
                 subscribers: [faker.random.array_element(users)._id],
                 title: casual.title,
-                subject: [faker.random.array_element(subjectData).name].map(function(e) {
-                    return Subjects.findOneFaster({
-                        name: e
+                subject: Subjects.findOneFaster({
+                        name: faker.random.array_element(subjectData).name
                     }, {
                         fields: {
                             _id: 1
                         }
-                    })._id;
-                }),
+                    })._id,
                 openStatus: faker.random.array_element([true, false])
             });
 
