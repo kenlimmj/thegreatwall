@@ -1,7 +1,6 @@
 Template.questionForm.events({
     'keyup #questionTitle, change #questionTitle': function(e) {
         var displayTarget = '#questionTitleDisplay';
-
         if (e.target.value.trim() === "") {
             $(displayTarget).html("Question Title");
         } else {
@@ -10,14 +9,12 @@ Template.questionForm.events({
     },
     'keyup #questionBody, change #questionBody': function(e) {
         var displayTarget = '#questionBodyDisplay';
-
         if (e.target.value.trim() === "") {
             $(displayTarget).html("Question Details");
         } else {
             Meteor.call('parseMarkdown', e.target.value.trim(), function(error, result) {
                 if (!error) {
                     $(displayTarget).html(result);
-
                     // Process LaTeX markup on the page
                     MathJax ? MathJax.Hub.Typeset() : null;
                 } else {
@@ -28,7 +25,6 @@ Template.questionForm.events({
     },
     'submit #questionForm': function(e) {
         e.preventDefault();
-
         var data = {
             title: $('#questionTitle').val().trim(),
             mdContent: $('#questionBody').val().trim(),
@@ -36,7 +32,6 @@ Template.questionForm.events({
             subject: $('#questionSubject').val(),
             openStatus: $('#questionStatus').val() === "true"
         }
-
         Questions.insert(data, function(error, result) {
             if (error) {
                 Alerts.add(error.message, 'warning');
@@ -46,15 +41,12 @@ Template.questionForm.events({
         });
     }
 });
-
 Template.questionForm.helpers({
     disciplines: function() {
         singleSubs.subscribe('subject', {}, {
             schools: 0
         }, {}, 0),
-
         singleSubs.subscribe('discipline', {}, {}, {}, 0)
-
         return Disciplines.findFaster().map(function(item) {
             if (Subjects.findOneFaster({
                 discipline: {
