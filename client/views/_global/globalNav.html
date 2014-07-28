@@ -23,11 +23,14 @@
                     <li class="{{isActivePath 'admin'}}"><a href="#">Admin</a>
                     </li>
                 </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    {{> loginButtons}}
+                </ul>
             </div>
         </div>
     </nav>
 </template>
-
+ 
 <template name="footerNav">
     <footer class="container-fluid">
         <div class="row">

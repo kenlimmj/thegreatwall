@@ -153,7 +153,7 @@ moment = function () { return {
     "charsLeftOver": 0,
     "invalidMonth": null
   },
-  "_d": "2014-07-25T13:14:46.474Z",
+  "_d": "2014-07-28T03:52:08.111Z",
   "clone": function emptyFn () {},
   "valueOf": function emptyFn () {},
   "unix": function emptyFn () {},
@@ -416,9 +416,9 @@ UserStatus = {
         "resetPassword": function emptyFn () {},
         "verifyEmail": function emptyFn () {},
         "createUser": function emptyFn () {},
-        "/__dummy_collection_aX4fAFRrGpov74buM/insert": function emptyFn () {},
-        "/__dummy_collection_aX4fAFRrGpov74buM/update": function emptyFn () {},
-        "/__dummy_collection_aX4fAFRrGpov74buM/remove": function emptyFn () {},
+        "/__dummy_collection_TSffbNjkDE7dZp2Cu/insert": function emptyFn () {},
+        "/__dummy_collection_TSffbNjkDE7dZp2Cu/update": function emptyFn () {},
+        "/__dummy_collection_TSffbNjkDE7dZp2Cu/remove": function emptyFn () {},
         "/user_status_sessions/insert": function emptyFn () {},
         "/user_status_sessions/update": function emptyFn () {},
         "/user_status_sessions/remove": function emptyFn () {},
@@ -477,7 +477,9 @@ UserStatus = {
         "/kbSecClass/insert": function emptyFn () {},
         "/kbSecClass/update": function emptyFn () {},
         "/kbSecClass/remove": function emptyFn () {},
-        "parseMarkdown": function emptyFn () {}
+        "parseMarkdown": function emptyFn () {},
+        "getFBUserData": function emptyFn () {},
+        "getFBFriendsData": function emptyFn () {}
       },
       "sessions": {},
       "stream_server": {
