@@ -25,7 +25,6 @@ Meteor.startup(function() {
 /*
  * FACEBOOK STUFF
  */
-
 // let's define the facebook object first. the stuff inside of this function is pretty much copied from the node example for fbgraph
 function Facebook(accessToken) {
 	this.fb = Meteor.require('fbgraph');
@@ -65,7 +64,6 @@ Facebook.prototype.getFBFriendsData = function() {
  * TWITTER STUFF
  * (Pretty much the same deal as facebook)
  */
-
 // creates twitter prototype using twitter node 
 function Twitter(accessToken, accessTokenSecret) {
     var twitter = Meteor.require('twitter');
@@ -100,6 +98,42 @@ Twitter.prototype.getTwitterFriendsData = function() {
     return this.query('/friends/list.json', parameters);
 }
 
+// gets all friends using next_cursor
+Twitter.prototype.getTwitterAllFriendsData = function() {
+    var parameters = {
+        include_entities: true,
+        count: 200,
+        cursor: -1
+    };
+
+    var users = [];
+    var hasNextCursor = true;
+
+    while(hasNextCursor) {
+        var fetchData = this.query('/friends/list.json', parameters);
+
+        if(fetchData['next_cursor'] == 0 || fetchData.hasOwnProperty('errors')) {
+            hasNextCursor = false;
+        } else {
+            parameters['cursor'] = fetchData['next_cursor'];
+        }
+
+        users = users.concat(fetchData['users']);
+    }
+    
+    return users;
+}
+
+// debug helper function for getting rate limit status
+// twitter allows 15 get requests per 15min per user (checked this using multiple accounts. confirmed its per user not per app)
+Twitter.prototype.getTwitterRateLimitStatus = function() {
+    var parameters = {
+        include_entities: true,
+        resources: 'friends'
+    };
+    return this.query('/application/rate_limit_status.json', parameters);
+}
+
 // add methods to meteor
 // these methods can be used as such (like as if you didn't already know)
 // Meteor.call('getFBFriendsData', function(err, data) {
@@ -119,6 +153,16 @@ Meteor.methods({
     getTwitterFriendsData: function() {
         var twitter = new Twitter(Meteor.user().services.twitter.accessToken, Meteor.user().services.twitter.accessTokenSecret); //because twitter is extra like that
         var data = twitter.getTwitterFriendsData();
+        return data;
+    },
+    getTwitterAllFriendsData: function() {
+        var twitter = new Twitter(Meteor.user().services.twitter.accessToken, Meteor.user().services.twitter.accessTokenSecret); //because twitter is extra like that
+        var data = twitter.getTwitterAllFriendsData();
+        return data;
+    },
+    getTwitterRateLimitStatus: function() {
+        var twitter = new Twitter(Meteor.user().services.twitter.accessToken, Meteor.user().services.twitter.accessTokenSecret); //because twitter is extra like that
+        var data = twitter.getTwitterRateLimitStatus();
         return data;
     }
 });

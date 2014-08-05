@@ -153,7 +153,7 @@ moment = function () { return {
     "charsLeftOver": 0,
     "invalidMonth": null
   },
-  "_d": "2014-08-05T05:07:43.861Z",
+  "_d": "2014-08-05T10:09:53.939Z",
   "clone": function emptyFn () {},
   "valueOf": function emptyFn () {},
   "unix": function emptyFn () {},
@@ -410,9 +410,9 @@ UserStatus = {
         "resetPassword": function emptyFn () {},
         "verifyEmail": function emptyFn () {},
         "createUser": function emptyFn () {},
-        "/__dummy_collection_JeFuCNpo4rE8a8fhZ/insert": function emptyFn () {},
-        "/__dummy_collection_JeFuCNpo4rE8a8fhZ/update": function emptyFn () {},
-        "/__dummy_collection_JeFuCNpo4rE8a8fhZ/remove": function emptyFn () {},
+        "/__dummy_collection_bAKsLvG79Y8kjQY4q/insert": function emptyFn () {},
+        "/__dummy_collection_bAKsLvG79Y8kjQY4q/update": function emptyFn () {},
+        "/__dummy_collection_bAKsLvG79Y8kjQY4q/remove": function emptyFn () {},
         "/user_status_sessions/insert": function emptyFn () {},
         "/user_status_sessions/update": function emptyFn () {},
         "/user_status_sessions/remove": function emptyFn () {},
@@ -483,7 +483,9 @@ UserStatus = {
         "parseMarkdown": function emptyFn () {},
         "getFBUserData": function emptyFn () {},
         "getFBFriendsData": function emptyFn () {},
-        "getTwitterFriendsData": function emptyFn () {}
+        "getTwitterFriendsData": function emptyFn () {},
+        "getTwitterAllFriendsData": function emptyFn () {},
+        "getTwitterRateLimitStatus": function emptyFn () {}
       },
       "sessions": {},
       "stream_server": {
