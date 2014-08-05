@@ -5,11 +5,8 @@
 
 # runtime-appcache
 accounts-emails-field
-accounts-github
-accounts-google
 accounts-password
 accounts-ui-bootstrap-3
-accounts-weibo
 bootstrap-alerts
 bootstrap-flatly
 browser-policy
@@ -33,7 +30,6 @@ simple-schema
 sitemaps
 standard-app-packages
 subs-manager
-accounts-linkedin
 authorization
 typeahead
 zones
@@ -43,3 +39,5 @@ velocity-html-reporter
 underscore-string-latest
 easy-search
 underscore
+accounts-twitter
+accounts-facebook
